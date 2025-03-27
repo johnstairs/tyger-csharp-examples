@@ -1,0 +1,15 @@
+job:
+  codespec:
+    image: ghcr.io/johnstairs/tyger-csharp-examples-run@sha256:4a693ad9b9a7d749d7e00f3fca70eec715fa78bf30f02d5eb1c415f7ec1c1cc3
+  
+    buffers:
+      inputs:
+        - input
+      outputs:
+        - output
+    
+    args:
+      - -i
+      - $(INPUT_PIPE)
+      - -o
+      - $(OUTPUT_PIPE)
